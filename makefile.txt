@@ -1,0 +1,8 @@
+makeall : main.o
+	gcc main.o -o makeall
+	
+main.o: main.c dijkstra.h algo.h salesmanPath.h
+	gcc -c main.c
+	
+clean:
+	rm -f *.o
